@@ -1,0 +1,23 @@
+# 
+#	This is my algorithm for sorting socks, 
+#  	I am unsure if this has been defined in any sort of literature. Google is failing me. So i decided to write it down 
+#
+#
+
+#Goal
+#	quickly, and in liner time, sort n elements in the m like pairs of k types.
+
+#Assumptions
+	1. Elements can be quickly identifed as meeting one of the k types
+	2. n > m > k
+	3. each type is mapped to an integer ie  k0 = 0, k1 = 1, etc
+
+let typeBuffer[] = Array(len = k) 
+for each sock in Array(Socks):
+	if typeBuffer[sock.type] == NULL
+		typeBuffer[sock.type] = sock
+	else
+		matchPair(sock, typeBuffer[sock.type])
+		typeBuffer[sock.type] = NULL
+
+	
